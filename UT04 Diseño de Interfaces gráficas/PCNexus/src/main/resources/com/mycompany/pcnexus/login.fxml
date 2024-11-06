@@ -12,13 +12,13 @@
 
 <AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23" fx:controller="com.mycompany.pcnexus.LoginController">
    <children>
-      <Pane id="PaneMain" layoutY="-38.0" prefHeight="900.0" prefWidth="1207.0" style="-fx-background-color: 12x;">
+      <Pane id="PaneMain" layoutX="23.0" layoutY="-39.0" prefHeight="900.0" prefWidth="1207.0" style="-fx-background-color: 12x;">
          <children>
             <Pane layoutX="500.0" layoutY="250.0" prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: black; -fx-background-radius: 12px;">
                <children>
                   <Button id="buttonLogin" layoutX="76.0" layoutY="220.0" mnemonicParsing="false" onMouseClicked="#loginEvent" text="Login" />
                   <PasswordField layoutX="26.0" layoutY="175.0" promptText="Password" />
-                  <TextField layoutX="25.0" layoutY="126.0" promptText="User" />
+                  <TextField id="inputUser" fx:id="inputUser" layoutX="25.0" layoutY="126.0" promptText="User" />
                   <ImageView fitHeight="98.0" fitWidth="95.0" layoutX="53.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/usuario.png" />

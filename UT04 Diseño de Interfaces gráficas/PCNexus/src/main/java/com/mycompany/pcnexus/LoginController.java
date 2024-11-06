@@ -7,12 +7,15 @@ package com.mycompany.pcnexus;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -22,7 +25,7 @@ import javafx.stage.Stage;
  * @author 2damb
  */
 public class LoginController implements Initializable {
-
+    
     /**
      * Initializes the controller class.
      */
@@ -30,26 +33,14 @@ public class LoginController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
-
+    
+    @FXML TextField inputUser;
+    @FXML private Button loginEvent;
     @FXML
     void loginEvent(MouseEvent event) throws IOException {
-        Stage previousStage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(loadFXML("menu"));
-        previousStage.setTitle("Main menu");
-        previousStage.setScene(scene);
-        /*
-        previousStage.close();
-        //Stage Node atctionEvent ge sourvce get secene get window
-        Scene scene;
-        Stage stage = new Stage();
-        try {
-            scene = new Scene(loadFXML("menu"));
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }*/
-
+        String data = inputUser.getText();
+        System.out.println("Input user data: " + data);
+        System.out.println("Hola");
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
