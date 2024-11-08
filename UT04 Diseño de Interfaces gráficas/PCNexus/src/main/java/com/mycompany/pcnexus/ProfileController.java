@@ -13,38 +13,35 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 /**
  * FXML Controller class
  *
- * @author 2damb
+ * @author tonyi
  */
-public class MenuController implements Initializable {
+public class ProfileController implements Initializable {
 
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
-    }
-
+        // TODO
+    } 
     @FXML
-    void openProfile(MouseEvent event) {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(loadFXML("profile"));
-        scene.getStylesheets().add(getClass().getResource("profileStyles.css").toExternalForm());
-        stage.setTitle("Profile");
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    private Parent loadFXML(String fxml) {
-    try {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
-    } catch (IOException e) {
-        e.printStackTrace();
-        return null;
-    }
+    void goBack(MouseEvent event) throws IOException {
+    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    Scene scene = new Scene(loadFXML("menu"));
+    scene.getStylesheets().add(getClass().getResource("menuStyles.css").toExternalForm());
+    stage.setTitle("Menu");
+    stage.setScene(scene);
+    stage.show();
 }
+    private static Parent loadFXML(String fxml) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        return fxmlLoader.load();
+    }
 }

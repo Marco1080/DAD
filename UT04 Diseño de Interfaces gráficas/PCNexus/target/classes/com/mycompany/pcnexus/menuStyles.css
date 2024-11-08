@@ -1,0 +1,32 @@
+#AnchorPane {
+    -fx-background-color: #2E3440;
+}
+
+.header-pane {
+    -fx-background-color: #3B4252;
+    -fx-background-radius: 8px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 10);
+}
+.header-title {
+    -fx-font-size: 24px;
+    -fx-fill: #ECEFF4;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+}
+
+.menu-item {
+    -fx-background-color: #4C566A;
+    -fx-background-radius: 8px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 10);
+}
+.menu-item:hover {
+    -fx-background-color: #5E81AC;
+}
+.menu-text {
+    -fx-font-size: 16px;
+    -fx-fill: #D8DEE9;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+}

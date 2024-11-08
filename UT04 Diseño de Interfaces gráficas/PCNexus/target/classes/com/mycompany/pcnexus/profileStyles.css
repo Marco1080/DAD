@@ -1,0 +1,35 @@
+.root {
+    -fx-background-color: #f0f4ff;
+}
+
+.text-field, .password-field, .combo-box, .date-picker {
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-background-color: #edf2ff;
+    -fx-border-color: transparent;
+    -fx-margin-bottom: 15px; /* Espacio entre los campos */
+}
+
+.button {
+    -fx-font-size: 14px;
+    -fx-background-color: #1d7ef2;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+    -fx-margin-top: 20px; /* Espacio adicional debajo de la última opción */
+}
+
+.radio-button, .check-box {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-margin-bottom: 10px;
+}
+
+.text {
+    -fx-font-size: 14px;
+    -fx-fill: #333;
+    -fx-padding: 0 0 10px 0;
+}

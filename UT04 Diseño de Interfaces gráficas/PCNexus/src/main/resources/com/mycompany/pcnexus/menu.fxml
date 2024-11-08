@@ -1,11 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.pcnexus.MenuController">
-    
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1200.0" stylesheets="@menuStyles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.pcnexus.MenuController">
+   <children>
+      <GridPane prefHeight="900.0" prefWidth="1200.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="359.0" minHeight="10.0" prefHeight="270.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="385.0" minHeight="10.0" prefHeight="316.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="614.0" minHeight="10.0" prefHeight="313.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Pane styleClass="header-pane" GridPane.columnIndex="1">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="125.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/usuario.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="143.0" layoutY="190.0" styleClass="header-title" text="PC NEXUS" />
+               </children>
+            </Pane>
+
+            <Pane fx:id="openProfile" onMousePressed="#openProfile" styleClass="menu-item" GridPane.columnIndex="0" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="125.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/perfil-del-usuario.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="175.0" layoutY="285.0" styleClass="menu-text" text="Profile" />
+               </children>
+            </Pane>
+
+            <Pane styleClass="menu-item" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="125.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/ciclo.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="171.0" layoutY="287.0" styleClass="menu-text" text="Storage" />
+               </children>
+            </Pane>
+
+            <Pane styleClass="menu-item" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="125.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/dolar.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="181.0" layoutY="295.0" styleClass="menu-text" text="Sales" />
+               </children>
+            </Pane>
+
+            <Pane styleClass="menu-item" GridPane.columnIndex="0" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="125.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/hardware.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="163.0" layoutY="295.0" styleClass="menu-text" text="Hardware" />
+               </children>
+            </Pane>
+
+            <Pane styleClass="menu-item" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="125.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/configuracion-de-la-computadora.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="139.0" layoutY="284.0" styleClass="menu-text" text="PC Configurator" />
+               </children>
+            </Pane>
+
+            <Pane styleClass="menu-item" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="125.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/chat-bot.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="183.0" layoutY="285.0" styleClass="menu-text" text="Chat" />
+               </children>
+            </Pane>
+            <ImageView fitHeight="109.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/poder.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+   </children>
 </AnchorPane>

@@ -15,8 +15,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
@@ -25,7 +27,7 @@ import javafx.stage.Stage;
  * @author 2damb
  */
 public class LoginController implements Initializable {
-    
+
     /**
      * Initializes the controller class.
      */
@@ -33,14 +35,39 @@ public class LoginController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
-    
-    @FXML TextField inputUser;
-    @FXML private Button loginEvent;
+
+    @FXML
+    TextField inputUser;
+    @FXML
+    PasswordField inputPassword;
+    @FXML
+    private Button loginEvent;
+    @FXML
+    Text errorMessage;
+
     @FXML
     void loginEvent(MouseEvent event) throws IOException {
-        String data = inputUser.getText();
-        System.out.println("Input user data: " + data);
-        System.out.println("Hola");
+        if ((inputUser.getText()).isEmpty() && (inputPassword.getText()).isEmpty()) {
+            errorMessage.setText("User and password are empty");
+            return;
+        }
+
+        if ((inputUser.getText()).isEmpty()) {
+            errorMessage.setText("User is empty.");
+            return;
+        }
+        if ((inputPassword.getText()).isEmpty()) {
+            errorMessage.setText("Password is empty.");
+            return;
+        }
+        errorMessage.setText("");
+        //Stage stage = (Stage)((Node)((EventObject) eventVariable).getSource()).getScene().getWindow();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(loadFXML("menu"));
+        scene.getStylesheets().add(getClass().getResource("menuStyles.css").toExternalForm());
+        stage.setTitle("Menu");
+        stage.setScene(scene);
+        stage.show();
     }
 
     private static Parent loadFXML(String fxml) throws IOException {

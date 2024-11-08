@@ -1,3 +1,48 @@
-.root {
-    -fx-background-color: lightgoldenrodyellow
+
+.main-background {
+    -fx-background-color: #282C34;
+}
+
+.login-container {
+    -fx-background-color: #333;
+    -fx-background-radius: 12px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 10);
+}
+
+.input-field {
+    -fx-background-radius: 8px;
+    -fx-background-color: #444;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #bbbbbb;
+    -fx-padding: 10px;
+}
+
+.error-message {
+    -fx-font-size: 12px;
+    -fx-text-fill: #ff4d4d;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.login-button {
+    -fx-background-color: #4CAF50;
+    -fx-background-radius: 8px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+}
+
+.or-text {
+    -fx-font-size: 14px;
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+
+.google-button {
+    -fx-background-color: #DB4437;
+    -fx-background-radius: 8px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
 }

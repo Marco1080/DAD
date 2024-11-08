@@ -7,27 +7,28 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23" fx:controller="com.mycompany.pcnexus.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.pcnexus.LoginController" stylesheets="@loginStyles.css">
    <children>
-      <Pane id="PaneMain" layoutX="23.0" layoutY="-39.0" prefHeight="900.0" prefWidth="1207.0" style="-fx-background-color: 12x;">
+      <Pane id="PaneMain" prefHeight="900.0" prefWidth="1207.0" styleClass="main-background">
          <children>
-            <Pane layoutX="500.0" layoutY="250.0" prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: black; -fx-background-radius: 12px;">
+            <VBox layoutX="450.0" layoutY="200.0" prefWidth="300.0" alignment="CENTER" spacing="15" styleClass="login-container">
                <children>
-                  <Button id="buttonLogin" layoutX="76.0" layoutY="220.0" mnemonicParsing="false" onMouseClicked="#loginEvent" text="Login" />
-                  <PasswordField layoutX="26.0" layoutY="175.0" promptText="Password" />
-                  <TextField id="inputUser" fx:id="inputUser" layoutX="25.0" layoutY="126.0" promptText="User" />
-                  <ImageView fitHeight="98.0" fitWidth="95.0" layoutX="53.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/usuario.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="43.0" layoutY="292.0" mnemonicParsing="false" style="-fx-background-radius: 16px;" text="Sig in with google" />
-                  <Text fill="WHITE" layoutX="88.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OR" />
+                  <TextField fx:id="inputUser" promptText="User" styleClass="input-field" />
+                  <PasswordField fx:id="inputPassword" promptText="Password" styleClass="input-field" />
+                  <Text fx:id="errorMessage" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="200.0" fill="RED" styleClass="error-message" />
+                  <Button id="buttonLogin" text="Login" styleClass="login-button" onMouseClicked="#loginEvent" />
+                  <Text text="OR" fill="WHITE" styleClass="or-text" />
+                  <Button text="Sign in with Google" styleClass="google-button" />
                </children>
-            </Pane>
+            </VBox>
          </children>
       </Pane>
    </children>

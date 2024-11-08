@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView layoutY="148.0" prefHeight="752.0" prefWidth="1200.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="285.0" text="PRODUCT NAME" />
+          <TableColumn prefWidth="265.0" text="PURCHASE DATE" />
+          <TableColumn prefWidth="140.0" text="QUANTITY" />
+          <TableColumn prefWidth="122.0" text="CLIENT TAG" />
+          <TableColumn prefWidth="129.0" text="TOTAL PRICE" />
+          <TableColumn prefWidth="183.0" text="BILL" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="75.0" fitWidth="97.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/flecha-izquierda.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
