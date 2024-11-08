@@ -9,7 +9,7 @@
     -fx-border-radius: 10;
     -fx-background-color: #edf2ff;
     -fx-border-color: transparent;
-    -fx-margin-bottom: 15px; /* Espacio entre los campos */
+    -fx-margin-bottom: 15px;
 }
 
 .button {
@@ -19,7 +19,7 @@
     -fx-background-radius: 10;
     -fx-padding: 10px 20px;
     -fx-cursor: hand;
-    -fx-margin-top: 20px; /* Espacio adicional debajo de la última opción */
+    -fx-margin-top: 20px;
 }
 
 .radio-button, .check-box {

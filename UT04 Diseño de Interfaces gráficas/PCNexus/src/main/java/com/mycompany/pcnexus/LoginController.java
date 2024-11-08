@@ -61,9 +61,15 @@ public class LoginController implements Initializable {
             return;
         }
         errorMessage.setText("");
-        //Stage stage = (Stage)((Node)((EventObject) eventVariable).getSource()).getScene().getWindow();
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("menu.fxml"));
+        Parent root = loader.load();
+
+        MenuController menuController = loader.getController();
+        menuController.setUser(inputUser.getText());
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(loadFXML("menu"));
+        Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("menuStyles.css").toExternalForm());
         stage.setTitle("Menu");
         stage.setScene(scene);

@@ -14,6 +14,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
@@ -27,6 +28,12 @@ public class MenuController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
 
     }
+    @FXML
+    Text userName;
+
+    public void setUser(String username) {
+        this.userName.setText(username);
+    }
 
     @FXML
     void openProfile(MouseEvent event) {
@@ -38,13 +45,25 @@ public class MenuController implements Initializable {
         stage.show();
     }
 
-    private Parent loadFXML(String fxml) {
-    try {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
-    } catch (IOException e) {
-        e.printStackTrace();
-        return null;
+    @FXML
+    void openConfigurator(MouseEvent event) {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(loadFXML("configurator"));
+        scene.getStylesheets().add(getClass().getResource("configuratorStyles.css").toExternalForm());
+        stage.setTitle("Configurator");
+        stage.setScene(scene);
+        stage.show();
     }
-}
+
+    private Parent loadFXML(String fxml) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxml + ".fxml"));
+            return fxmlLoader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+
+        }
+
+    }
 }

@@ -1,5 +1,6 @@
 com\mycompany\pcnexus\SecondaryController.class
 com\mycompany\pcnexus\App.class
+com\mycompany\pcnexus\AccesibilidadVisualController.class
 com\mycompany\pcnexus\WelcomeController.class
 com\mycompany\pcnexus\HardwareController.class
 com\mycompany\pcnexus\PrimaryController.class

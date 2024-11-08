@@ -30,7 +30,7 @@
                         <Image url="@images/usuario.png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="143.0" layoutY="190.0" styleClass="header-title" text="PC NEXUS" />
+                  <Text fx:id="userName" layoutX="143.0" layoutY="190.0" styleClass="header-title" text="PC NEXUS" textAlignment="CENTER" />
                </children>
             </Pane>
 
@@ -78,7 +78,7 @@
                </children>
             </Pane>
 
-            <Pane styleClass="menu-item" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Pane onMousePressed="#openConfigurator" styleClass="menu-item" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
                   <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="125.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
                      <image>

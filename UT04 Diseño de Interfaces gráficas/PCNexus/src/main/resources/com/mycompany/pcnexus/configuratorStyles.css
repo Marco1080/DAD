@@ -1,0 +1,111 @@
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: #1e1e2f; /* Fondo oscuro */
+}
+
+.label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+}
+
+.combo-box {
+    -fx-background-color: #2a2a3a;
+    -fx-border-color: #555;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-text-fill: #ffffff;
+}
+
+.combo-box:hover {
+    -fx-border-color: #6699cc;
+}
+
+.combo-box:focused {
+    -fx-border-color: #66ccff;
+    -fx-background-color: #33334d;
+}
+
+.spinner {
+    -fx-background-color: #2a2a3a;
+    -fx-border-color: #555;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: #444;
+}
+
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    -fx-background-color: #6699cc;
+}
+
+.spinner .text-field {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #2a2a3a;
+}
+
+.text-field {
+    -fx-background-color: #2a2a3a;
+    -fx-border-color: #555;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-text-fill: #ffffff;
+}
+
+.text-field:focused {
+    -fx-border-color: #66ccff;
+    -fx-background-color: #33334d;
+}
+
+.choice-box {
+    -fx-background-color: #2a2a3a;
+    -fx-border-color: #555;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-text-fill: #ffffff;
+}
+
+.choice-box:hover {
+    -fx-border-color: #6699cc;
+}
+
+.choice-box:focused {
+    -fx-border-color: #66ccff;
+    -fx-background-color: #33334d;
+}
+
+.slider {
+    -fx-border-color: #555;
+}
+
+.slider .track {
+    -fx-background-color: #33334d;
+}
+
+.slider .thumb {
+    -fx-background-color: #66ccff;
+    -fx-effect: dropshadow(gaussian, #66ccff, 5, 0.5, 0, 0);
+}
+
+.slider .thumb:hover {
+    -fx-background-color: #88e0ff;
+}
+
+.slider .track:hover {
+    -fx-background-color: #555;
+}
+
+.combo-box:hover, .spinner:hover, .text-field:hover, .choice-box:hover {
+    -fx-border-color: #6699cc;
+}
+
+.combo-box:focused, .spinner:focused, .text-field:focused, .choice-box:focused {
+    -fx-border-color: #66ccff;
+}
+
+.label, .combo-box, .spinner, .text-field, .choice-box, .slider {
+    -fx-padding: 5px;
+}
