@@ -1,16 +1,23 @@
 package com.mycompany.pcnexus;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Slider;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 public class ConfiguratorController implements Initializable {
 
@@ -31,14 +38,14 @@ public class ConfiguratorController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // Agregar opciones al ComboBox para CPU
+        
+        
+        
         cpuComboBox.setItems(FXCollections.observableArrayList("Intel i5", "Intel i7", "AMD Ryzen 5", "AMD Ryzen 7"));
-        cpuComboBox.getSelectionModel().selectFirst(); // Selecciona la primera opción por defecto
+        cpuComboBox.getSelectionModel().selectFirst();
 
-        // Configurar Spinner para RAM
-        ramSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(4, 64, 8)); // De 4GB a 64GB, valor inicial 8GB
+        ramSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(4, 64, 8));
 
-        // Agregar opciones al ChoiceBox para GPU
         gpuChoiceBox.setItems(FXCollections.observableArrayList(
                 "NVIDIA RTX 3060",
                 "NVIDIA RTX 3070",
@@ -56,8 +63,22 @@ public class ConfiguratorController implements Initializable {
                 "AMD Radeon RX 7900 XTX"
         ));
 
-        gpuChoiceBox.getSelectionModel().selectFirst(); // Selecciona la primera opción por defecto
+        gpuChoiceBox.getSelectionModel().selectFirst();
+        
+    }
+    
+    @FXML
+    void goBack(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(loadFXML("menu"));
+        scene.getStylesheets().add(getClass().getResource("menuStyles.css").toExternalForm());
+        stage.setTitle("Menu");
+        stage.setScene(scene);
+        stage.show();
+    }
 
-        // Configurar el Slider para PSU en el archivo FXML
+    private static Parent loadFXML(String fxml) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        return fxmlLoader.load();
     }
 }

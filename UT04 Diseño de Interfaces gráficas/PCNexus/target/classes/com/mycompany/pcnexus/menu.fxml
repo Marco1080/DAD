@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1200.0" stylesheets="@menuStyles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.pcnexus.MenuController">
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1200.0" stylesheets="@menuStyles.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.pcnexus.MenuController">
    <children>
       <GridPane prefHeight="900.0" prefWidth="1200.0">
          <columnConstraints>
@@ -99,11 +99,15 @@
                   <Text layoutX="183.0" layoutY="285.0" styleClass="menu-text" text="Chat" />
                </children>
             </Pane>
-            <ImageView fitHeight="109.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@images/poder.png" />
-               </image>
-            </ImageView>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="109.0" fitWidth="109.0" layoutX="146.0" layoutY="81.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/poder.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
          </children>
       </GridPane>
    </children>

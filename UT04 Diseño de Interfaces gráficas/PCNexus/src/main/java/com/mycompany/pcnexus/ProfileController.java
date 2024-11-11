@@ -30,16 +30,18 @@ public class ProfileController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    } 
+    }
+
     @FXML
     void goBack(MouseEvent event) throws IOException {
-    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-    Scene scene = new Scene(loadFXML("menu"));
-    scene.getStylesheets().add(getClass().getResource("menuStyles.css").toExternalForm());
-    stage.setTitle("Menu");
-    stage.setScene(scene);
-    stage.show();
-}
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(loadFXML("menu"));
+        scene.getStylesheets().add(getClass().getResource("menuStyles.css").toExternalForm());
+        stage.setTitle("Menu");
+        stage.setScene(scene);
+        stage.show();
+    }
+
     private static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();

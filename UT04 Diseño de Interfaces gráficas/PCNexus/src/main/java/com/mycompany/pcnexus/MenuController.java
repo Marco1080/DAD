@@ -66,4 +66,14 @@ public class MenuController implements Initializable {
         }
 
     }
+    @FXML
+    void goBack(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(loadFXML("login"));
+        scene.getStylesheets().add(getClass().getResource("loginStyles.css").toExternalForm());
+        stage.setTitle("Login");
+        stage.setScene(scene);
+        stage.show();
+    }
+    
 }
