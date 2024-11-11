@@ -76,4 +76,13 @@ public class MenuController implements Initializable {
         stage.show();
     }
     
+    @FXML
+    void goAccesibility(MouseEvent event) throws IOException {
+        Stage stage = new Stage();
+        stage.setTitle("Accesibility");
+        Scene sceneAccesibility = new Scene(loadFXML("accesibilidadVisual"));
+        stage.setScene(sceneAccesibility);
+        stage.show();
+    }
+    
 }

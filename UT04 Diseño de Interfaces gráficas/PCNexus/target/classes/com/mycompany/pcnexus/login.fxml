@@ -10,26 +10,26 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1200.0" stylesheets="@loginStyles.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.pcnexus.LoginController">
-   <children>
-      <Pane id="PaneMain" prefHeight="900.0" prefWidth="1207.0" styleClass="main-background">
-         <children>
-            <VBox alignment="CENTER" layoutX="450.0" layoutY="200.0" prefWidth="300.0" spacing="15" styleClass="login-container">
-               <children>
-                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" styleClass="-fx-background-radius">
-                     <image>
-                        <Image url="@images/logoTemporal.png" />
-                     </image>
-                  </ImageView>
-                  <TextField fx:id="inputUser" promptText="User" styleClass="input-field" />
-                  <PasswordField fx:id="inputPassword" promptText="Password" styleClass="input-field" />
-                  <Text fx:id="errorMessage" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-message" wrappingWidth="200.0" />
-                  <Button id="buttonLogin" onMouseClicked="#loginEvent" styleClass="login-button" text="Login" />
-                  <Text fill="WHITE" styleClass="or-text" text="OR" />
-                  <Button styleClass="google-button" text="Sign in with Google" />
-               </children>
-            </VBox>
-         </children>
-      </Pane>
-   </children>
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1200.0" stylesheets="@loginStyles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.pcnexus.LoginController">
+    <children>
+        <Pane id="PaneMain" prefHeight="900.0" prefWidth="1207.0" styleClass="main-background">
+            <children>
+                <VBox alignment="CENTER" layoutX="450.0" layoutY="200.0" prefWidth="300.0" spacing="15" styleClass="login-container">
+                    <children>
+                        <ImageView fitHeight="160.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true" styleClass="-fx-background-radius">
+                            <image>
+                                <Image url="@images/enterpriseLogo.png" />
+                            </image>
+                        </ImageView>
+                        <TextField fx:id="inputUser" promptText="User" styleClass="input-field" />
+                        <PasswordField fx:id="inputPassword" promptText="Password" styleClass="input-field" />
+                        <Text fx:id="errorMessage" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-message" wrappingWidth="200.0" />
+                        <Button id="buttonLogin" onMouseClicked="#loginEvent" styleClass="login-button" text="Login" />
+                        <Text fill="WHITE" styleClass="or-text" text="OR" />
+                        <Button styleClass="google-button" text="Sign in with Google" />
+                    </children>
+                </VBox>
+            </children>
+        </Pane>
+    </children>
 </AnchorPane>
