@@ -54,6 +54,16 @@ public class MenuController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+    
+    @FXML
+    void openSales(MouseEvent event) {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(loadFXML("sales"));
+        //scene.getStylesheets().add(getClass().getResource("configuratorStyles.css").toExternalForm());
+        stage.setTitle("Encuesta");
+        stage.setScene(scene);
+        stage.show();
+    }
 
     private Parent loadFXML(String fxml) {
         try {

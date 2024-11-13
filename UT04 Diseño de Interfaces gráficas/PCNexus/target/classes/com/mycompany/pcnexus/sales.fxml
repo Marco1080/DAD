@@ -1,28 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.pcnexus.SalesController">
    <children>
-      <TableView layoutY="148.0" prefHeight="752.0" prefWidth="1200.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="ID" />
-          <TableColumn prefWidth="285.0" text="PRODUCT NAME" />
-          <TableColumn prefWidth="265.0" text="PURCHASE DATE" />
-          <TableColumn prefWidth="140.0" text="QUANTITY" />
-          <TableColumn prefWidth="122.0" text="CLIENT TAG" />
-          <TableColumn prefWidth="129.0" text="TOTAL PRICE" />
-          <TableColumn prefWidth="183.0" text="BILL" />
-        </columns>
-      </TableView>
-      <ImageView fitHeight="75.0" fitWidth="97.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/flecha-izquierda.png" />
-         </image>
-      </ImageView>
+      <Pane id="tipoChoiceBox" layoutX="6.0" layoutY="-7.0" onMouseClicked="#goBack" prefHeight="900.0" prefWidth="1200.0" style="-fx-background-color: #c1cce3;">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="109.0" fitWidth="109.0" layoutX="46.0" layoutY="46.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/flecha-izquierda.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Text layoutX="439.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Encuesta de productos" textAlignment="CENTER">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Button fx:id="comprobarPolitica" layoutX="574.0" layoutY="752.0" mnemonicParsing="false" text="Enviar." textAlignment="CENTER" />
+            <CheckBox layoutX="515.0" layoutY="662.0" mnemonicParsing="false" text="Recibir información de ofertas." />
+            <GridPane layoutX="271.0" layoutY="132.0" prefHeight="519.0" prefWidth="671.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="98.0" minHeight="10.0" prefHeight="87.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="672.0">
+                     <children>
+                        <Text layoutX="209.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Has comprado u oído antes de nosotros?" />
+                        <RadioButton layoutX="260.0" layoutY="41.0" mnemonicParsing="false" text="Si" />
+                        <RadioButton layoutX="317.0" layoutY="41.0" mnemonicParsing="false" text="No" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <Text layoutX="173.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indica en que casos coincides con las siguientes afirmaciones:" />
+                        <CheckBox layoutX="148.0" layoutY="36.0" mnemonicParsing="false" text="He recibido buen trato." />
+                        <CheckBox layoutX="148.0" layoutY="65.0" mnemonicParsing="false" text="Volvería a comprar." />
+                        <CheckBox layoutX="418.0" layoutY="36.0" mnemonicParsing="false" text="Recomendaría a amigos o familiares." />
+                        <CheckBox layoutX="418.0" layoutY="65.0" mnemonicParsing="false" text="Estoy atent@ a las promociones." />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="68.0" prefWidth="671.0" GridPane.rowIndex="3">
+                     <children>
+                        <DatePicker layoutX="249.0" layoutY="37.0" />
+                        <Text layoutX="180.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Sabrías indicar en que fecha realizaste tu última compra??" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                     <children>
+                        <Text layoutX="192.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Que tipo de producto?" />
+                        <ComboBox id="tipoBox" fx:id="tipoBox" layoutX="336.0" layoutY="19.0" prefWidth="150.0" />
+                     </children>
+                  </Pane>
+                  <TextArea prefHeight="104.0" prefWidth="671.0" promptText="Danos recomendaciones para ofrecerte un mejor servicio." GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+            <CheckBox id="politicas" layoutX="528.0" layoutY="696.0" mnemonicParsing="false" text="Aceptar polítcas de datos" />
+            <Text id="errorMessage" fx:id="errorMessage" fill="RED" layoutX="585.0" layoutY="737.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aviso" textAlignment="CENTER" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
