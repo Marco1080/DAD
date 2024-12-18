@@ -8,6 +8,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 import javafx.scene.text.Text;
 
 /**
@@ -24,6 +25,12 @@ public class MenuController implements Initializable {
     private Text userName;
     @FXML
     private Text userPass;
+    @FXML
+    private Text userState;
+    @FXML
+    private Text userCity;
+    @FXML Text userBill;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -33,6 +40,17 @@ public class MenuController implements Initializable {
     }
     public void setPass(String userpass) {
         this.userPass.setText("Contraseña: " + userpass);
+    }
+    public void setState(String userstate) {
+        this.userState.setText("Estado: " + userstate);
+    }
+    
+    public void setCity(String usercity) {
+        this.userCity.setText("Ciudad: " + usercity);
+    }
+    
+    public void setBill(String userbill) {
+        this.userBill.setText("Sueldo: " + userbill);
     }
     
 }

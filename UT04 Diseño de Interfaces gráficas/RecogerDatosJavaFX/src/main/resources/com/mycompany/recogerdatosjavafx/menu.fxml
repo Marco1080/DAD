@@ -4,12 +4,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23" fx:controller="com.mycompany.recogerdatosjavafx.MenuController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.recogerdatosjavafx.MenuController">
    <children>
-      <Text fx:id="userName" layoutX="279.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nombre" />
+      <Text fx:id="userName" layoutX="279.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
       <Text layoutX="262.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mostrar datos:" />
-      <Text fx:id="userPass" layoutX="271.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="contrasena" />
-      <Button layoutX="275.0" layoutY="155.0" mnemonicParsing="false" text="Volver" />
+      <Text fx:id="userPass" layoutX="271.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contrasena" />
+      <Button layoutX="275.0" layoutY="256.0" mnemonicParsing="false" text="Volver" />
+      <Text fx:id="userState" layoutX="282.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado" />
+      <Text fx:id="userCity" layoutX="282.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ciudad" />
+      <Text fx:id="userBill" layoutX="281.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sueldo" />
    </children>
 </AnchorPane>
